@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap%27);
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("img/fundo3.jpg");
+}
+
+.livro{
+    box-shadow: -8px 19px 20px 2px rgba(0,0,0,0.76);
+    background-image: url("img/livro1.png");
+    background-size: cover;
+    flex-direction: column;
+    display: flex;
+    width: 900px;
+    height: 629px;
+    margin-top: 60px;
+    margin-left: 20%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+p{
+    font-family: 'Libre Caslon Display', serif;
+    width: 370px;
+    height: 520px;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(0, 0, 0, 0.699);
+    font-style: bold;
+}
+
+.livro p:last-child{
+    margin-left: -40px;
+}
+
+.livro .botao{
+    margin-top: 20px;
+}
+
+.livro button{
+    width: 70px;
+    height: 30px;
+}
+
+.livro .pagina1{
+    margin-top: 50px;
+    margin-left: 70px;
+}
+
+.livro .pagina2{
+    margin-top: 50px;
+    margin-right: 20px;
+}
