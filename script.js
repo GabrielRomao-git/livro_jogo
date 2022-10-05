@@ -1,35 +1,42 @@
+var pagina1 = "<div id='music'> <audio autoplay loop controls='controls'> <source src='X2Download.app - Low of Solipsism - Death Note [Extended] (128 kbps).mp3' type='audio/mpeg'></div></audio><div class='gif'> <video autoplay muted loop ><source src='img/Candles forming a heart.mp4' type='video/mp4'></video></div> <div id='letrasClara' class='livro'><button onclick='darkMode();'>Dark Mode</button><button onclick='mudarPagina(pagina2);'>Escolha X</button> <button onclick='mudarPagina(pagina3);'>Escolha Y</button> <img class='imagem_livro_aberto'  src='img/livrorecortado.png' ><figcaption id='pagina1'><strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatibus dolores quos voluptates, alias aut praesentium omnis doloremque quas, iure, eos cumque totam aspernatur illo similique libero consequatur veniam facere dolorem optio perspiciatis dolorum. Quaerat, officiis. Voluptate incidunt facilis quisquam consequatautem asperiores? Accusantium officiis nesciunt magnam. Facilis nemo asperiores placeat consequuntur est, amet vitae aspernatur debitis id excepturi libero praesentium repellat qui ratione voluptates eos voluptas, impedit quidem iure ab suscipit at quas delectus quos! Maxime expedita nam tempore qui, velit facilis ad totam saepe voluptates sed eius vel rerum molestias provident tenetur dignissimos repellat dicta ullam minima fugiat quo assumenda eum dolorum cum! Qui, molestiae!</strong></figcaption><figcaption id='pagina2'><strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi laudantium non magni, totam fugit autem aliquam quos consectetur excepturi tempore ducimus! Accusantium nulla, quis eveniet veritatis officia ipsum voluptate non. Vel eveniet et vero libero vitae assumenda tempora quia cumque quisquam beatae. Architecto, accusamus qeniti vel, sit dolorem in facilis, praesentium id porro iste ipsum architecto? Id, expedita? Repellat corporis obcaecati, voluptate natus distinctio sequi dolor, adipisci fugiat reiciendis sunt alias? Sed aliquam aliquid quia alias. Harum quasi, pariatur fuga sit error ducimus possimus omnis libero repellat nostrum quam eius porro, assumenda commodi, rem voluptatem ratione.</strong></figcaption></div>"
 
-var pagina1=""//pagina 1;
-var pagina2=""//pagina 2;
+var pagina2 = "<div class='gif'> <video autoplay muted loop ><source src='img/Candles forming a heart.mp4' type='video/mp4'></video></div>  <div id='letrasClara' class='livro'><button onclick='darkMode();'>Dark Mode</button><button onclick='mudarPagina(pagina4);'>Escolha A</button><button onclick='mudarPagina(pagina5);'>Escolha B</button><img class='imagem_livro_aberto'  src='img/livrorecortado.png' ><figcaption id='pagina1'><strong> Pagina 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis voluptatibus dolores quos voluptates, alias aut praesentium omnis doloremque quas, iure, eos cumque totam aspernatur illo similique libero consequatur veniam facere dolorem optio perspiciatis dolorum. Quaerat, officiis. Voluptate incidunt facilis quisquam consequatautem asperiores? Accusantium officiis nesciunt magnam. Facilis nemo asperiores placeat consequuntur est, amet vitae aspernatur debitis id excepturi libero praesentium repellat qui ratione voluptates eos voluptas, impedit quidem iure ab suscipit at quas delectus quos! Maxime expedita nam tempore qui, velit facilis ad totam saepe voluptates sed eius vel rerum molestias provident tenetur dignissimos repellat dicta ullam minima fugiat quo assumenda eum dolorum cum! Qui, molestiae!</strong></figcaption><figcaption id='pagina2'><strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi laudantium non magni, totam fugit autem aliquam quos consectetur excepturi tempore ducimus! Accusantium nulla, quis eveniet veritatis officia ipsum voluptate non. Vel eveniet et vero libero vitae assumenda tempora quia cumque quisquam beatae. Architecto, accusamus qeniti vel, sit dolorem in facilis, praesentium id porro iste ipsum architecto? Id, expedita? Repellat corporis obcaecati, voluptate natus distinctio sequi dolor, adipisci fugiat reiciendis sunt alias? Sed aliquam aliquid quia alias. Harum quasi, pariatur fuga sit error ducimus possimus omnis libero repellat nostrum quam eius porro, assumenda commodi, rem voluptatem ratione.</strong></figcaption></div><div id='music'> <audio autoplay loop controls='controls'> <source src='X2Download.app - Low of Solipsism - Death Note [Extended] (128 kbps).mp3' type='audio/mpeg'></audio></div> <script type='text/javascript' src='script.js'></script>"
+
 var pagina3=""//pagina 3;
 var pagina4=""//pagina 4;
 var pagina5=""//pagina 5;
-var livro=document.querySelector(".livro"); //variavel que armazena o livro
-var botoes=document.querySelectorAll(".botoes"); //variavel que armazena os botoes de escolha
 
-function darkMode(){ //mudar pro modo noturno
-    document.querySelector("body").classList.toggle(".dark-mode"); 
-}
+    var livro = document.querySelector(".livro"); //variavel que armazena o livro
+// var botoes = document.querySelectorAll(".botoes"); //variavel que armazena os botoes de escolha
+    var conteudo = document.getElementById("conteudo");
 
-function mudarPagina(num_pagina){ //mudar de pagina
-livro.innerHTML=num_pagina;
-}
+    var img = document.querySelector(".imagem_livro_aberto");
+    var corpo = document.getElementById("letrasClara");
+    var Darkmode = false;
 
-for(var i=0; i<botoes.length; i++){ //adiciona a funçao pra cada botao
-    botoes[i].addEventListener("click", function(){ ///adiciona evento "click" em cada botao
-    switch(botoes.id){ //pega o id do botao
-        case "escolha 1":
-            mudarPagina("pagina"); //muda pagina de acordo com a escolha 
-            break;
-            case "escolha 2":
-            mudarPagina("pagina"); //muda pagina de acordo com a escolha 
-            break;
-            case "escolha 3":
-            mudarPagina("pagina"); //muda pagina de acordo com a escolha 
-            break;
-            case "escolha 4":
-            mudarPagina("pagina"); //muda pagina de acordo com a escolha 
-            break;
+    function darkMode() {
+        if (Darkmode == false){
+            
+            img.setAttribute('src', 'img/LivroDark.png');
+
+            Darkmode = true;
+
+        } else {
+            img.setAttribute ('src', 'img/livrorecortado.png')
+
+            Darkmode = false;
+        }
+
+        corpo.classList.toggle("altoContraste");
+
     }
-})
-}
+
+        function mudarPagina(num_pagina){ //mudar de pagina
+        conteudo.innerHTML = num_pagina;
+    }
+
+        function abrir_livro () {
+        conteudo.innerHTML = pagina1
+    }
+
+
