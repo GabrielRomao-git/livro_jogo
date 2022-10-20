@@ -115,32 +115,21 @@
     height: 80%;
 }
 
+.livro .conteudo1 img{
+    position: relative;
+    top: 5%;
+    width: 96%;
+    height: 70%;
+    border: solid rgb(126, 101, 69) 4px;
+    border-radius: 10px;
+}
+
 .livro .conteudo2 {
     position: absolute;
     top: 10%;
     right: 6%;
     width: 40%;
     height: 80%;
-}
-
-/* .livro #pagina2 {
-    position: absolute;
-    top: 10%;
-    right: 6%;
-    width: 40%;
-    height: 80%;
-}
-
-.livro #pagina1{
-    position: absolute;
-    top: 10%;
-    left: 8%;
-    width: 40%;
-    height: 80%;
-} */
-
-#corpo #pagina1 strong, #corpo #pagina2 strong {
-    font-size: clamp(0.4em, 0.5em + 0.5vw, 3em);
 }
 
 .livro button{
@@ -154,16 +143,32 @@
 } 
 
 .conteudo2 #escolha1{
-    position: fixed;
-    margin-top: 20%;
-    margin-left: 18%;
+    position: relative;
+    margin-top: 80%;
+    margin-left: 60%;
 }
 
 .conteudo2 #escolha2{
-    position: fixed;
-    margin-top: 20%;
-    margin-left: 23%;
+    position: relative;
+    margin-top: -10%;
+    margin-left: 25%;
 }
+
+.conteudo2 #pagina2 .corinthians p{
+    position: relative;
+    margin-top: 3%;
+    margin-left: 0%;
+    line-height: 120%;
+    font-size: 20px;
+}
+
+.conteudo2 #pagina2 .corinthians p:nth-child(1){
+    font-size: 25px;
+    text-align: center;
+
+
+}
+
 
 
 
@@ -256,10 +261,6 @@ button:hover{
 }
 
 @media screen and(min-width: 1122px) and (min-height: 625px){
-    #corpo #pagina1 strong, #corpo #pagina2 strong {
-        font-size: clamp(0.01em, 0.1em + 0.1vw, 2em);
-    }
-    
     .livro button{
         height: auto;
         width: auto;
@@ -273,5 +274,5 @@ button:hover{
 }
 
 .altoContraste #pagina1 strong, .altoContraste #pagina2 strong{
-    color: #2f2d6d;
+    color: #d8d8d8;
 }
